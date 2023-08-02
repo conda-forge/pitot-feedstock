@@ -1,5 +1,5 @@
 {% set name = "pitot" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pitot-{{ version }}.tar.gz
-  sha256: 5acff2e214d0a9ea2fe941e53d0dc5ea92c8c09d73f2715f3b452c46fa856d67
+  sha256: 530bdc1ea563d778566e86cf30eb3b130a3b8f481788ceeb408bed9a8d794cc7
 
 build:
   noarch: python
