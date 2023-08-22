@@ -1,11 +1,11 @@
-About pitot
-===========
+About pitot-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pitot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pitot/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pitot-feedstock/blob/main/LICENSE.txt)
 
 Summary: Toolbox for aeronautic units and conversions
 
