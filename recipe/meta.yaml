@@ -1,5 +1,6 @@
 {% set name = "pitot" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pitot-{{ version }}.tar.gz
-  sha256: 530bdc1ea563d778566e86cf30eb3b130a3b8f481788ceeb408bed9a8d794cc7
+  sha256: 97247d6b70165b3c05fefbf0ae631cfb13ebba71aa71e287c5c0c5d2b2c9f495
 
 build:
   noarch: python
@@ -16,16 +17,16 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
-    - poetry-core >=1.0.0
+    - python {{ python_min }}
+    - hatchling
     - pip
   run:
-    - python >=3.8.0,<4.0.0
-    - numpy >=1.23.0
-    - pandas >=1.4.3
-    - typing-extensions >=4.3.0
-    - pyproj >=3.3.1
-    - impunity >=1.0.3
+    - python >={{ python_min }}
+    - numpy >=2.0.2
+    - pandas >=2.2.3
+    - typing-extensions >=4.12.2
+    - pyproj >=3.7.0
+    - impunity >=1.0.5
 
 test:
   imports:
@@ -33,6 +34,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
@@ -44,4 +46,3 @@ about:
 extra:
   recipe-maintainers:
     - xoolive
-    - junzis
